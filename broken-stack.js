@@ -7,11 +7,7 @@ async function breaker() {
 }
 
 async function stack() {
-  try {
-    await breaker();
-  } catch (error) {
-    throw error;
-  }
+  await breaker();
 }
 
 async function two() {
